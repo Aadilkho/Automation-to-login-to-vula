@@ -1,0 +1,14 @@
+from selenium import webdriver
+
+url = 'https://vula.uct.ac.za/portal'
+
+driver = webdriver.Chrome("/Users/aadil/Downloads/chromedriver")
+
+email=''
+passw=''
+
+driver.get(url)
+driver.find_element_by_id('loginLink1').click()
+driver.find_element_by_id('userNameInput').send_keys(email)
+driver.find_element_by_id('passwordInput').send_keys(passw)
+driver.find_element_by_id('submitButton').click()
